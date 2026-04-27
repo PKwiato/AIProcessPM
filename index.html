@@ -398,41 +398,15 @@ svg line:not(.flow-line), svg path:not(.flow-line) {
 <main class="main" id="main-content">
 <div class="wrap">
 <!--
-  LAYOUT PLAN (viewBox 0 0 1060 1540)
+  LAYOUT PLAN (viewBox 0 0 1200 2700)
   ─────────────────────────────────────────────────────
-  TOR 1 (PRD)   center-x=265  track x=30..500
-  TOR 2 (Backlog) center-x=790 track x=555..1030
+  TOR 1 (PRD)   center-x=300  track x=40..560
+  TOR 2 (Backlog) center-x=900 track x=640..1160
 
-  ROW y positions:
-    50   – track labels
-    80   – inputs (two small boxes per track)
-   165   – Agent 1 / [empty right]
-   255   – Gate 1 / [empty right]
-   345   – Agent 2 / [empty right]
-   435   – Agent 3 / [empty right]
-   525   – Gate PRD / [empty right]
-   615   – PRD Confluence (living doc)
-
-   680   – TIME SEPARATOR line
-
-   730   – PM TRIGGER (centered, full width)
-
-   820   – [empty left] / Agent 4
-   910   – [empty left] / Gate Backlog
-  1000   – [empty left] / Jira output
-  1090   – [empty left] / Gate Sprint
-
-  1190  – Agent 5 (full width)
-  1280  – Gate Report (centered)
-  1370  – SSOT (full width)
-  1460  – Slack + Jira outputs
-
-  Rejection loops:
-    Tor 1 loops → LEFT side  at x=18
-    Tor 2 loops → RIGHT side at x=1042
-─────────────────────────────────────────────────────
+  Significant vertical and horizontal spacing added for clarity.
+  ─────────────────────────────────────────────────────
 -->
-<svg id="diagram" viewBox="0 0 1060 1540" xmlns="http://www.w3.org/2000/svg" style="min-width:720px;width:100%;max-width:1060px" aria-labelledby="svg-title svg-desc" role="img">
+<svg id="diagram" viewBox="0 0 1200 2700" xmlns="http://www.w3.org/2000/svg" style="min-width:720px;width:100%;max-width:1200px" aria-labelledby="svg-title svg-desc" role="img">
 <title id="svg-title">Diagram Procesu AI PM</title>
 <desc id="svg-desc">Interaktywny schemat przedstawiający dwa tory pracy Product Managera z wykorzystaniem agentów AI: Tor 1 dla PRD i Tor 2 dla Backlogu.</desc>
 <defs>
@@ -462,15 +436,15 @@ svg line:not(.flow-line), svg path:not(.flow-line) {
 <!-- ══════════════════════════════════════════ -->
 
 <!-- Track 1 bg -->
-<rect x="30" y="42" width="470" height="630" rx="14"
-  fill="rgba(139, 128, 249, 0.05)" stroke="rgba(139, 128, 249, 0.2)" stroke-width="1"/>
+<rect x="40" y="42" width="520" height="1030" rx="20"
+  fill="rgba(139, 128, 249, 0.03)" stroke="rgba(139, 128, 249, 0.15)" stroke-width="1.5"/>
 <!-- Track 2 bg -->
-<rect x="555" y="715" width="475" height="440" rx="14"
-  fill="rgba(255, 126, 95, 0.05)" stroke="rgba(255, 126, 95, 0.2)" stroke-width="1"/>
+<rect x="640" y="1120" width="520" height="1100" rx="20"
+  fill="rgba(255, 126, 95, 0.03)" stroke="rgba(255, 126, 95, 0.15)" stroke-width="1.5"/>
 
 <!-- Track labels -->
-<text x="52" y="62" fill="rgba(123,111,240,.4)" font-size="9" font-family="Syne,sans-serif" font-weight="700" letter-spacing="1.8">TOR 1 — PRD · ŻYWY DOKUMENT · WIELE ITERACJI</text>
-<text x="577" y="734" fill="rgba(240,112,80,.4)" font-size="9" font-family="Syne,sans-serif" font-weight="700" letter-spacing="1.8">TOR 2 — BACKLOG / SPRINT · URUCHAMIANY PRZEZ PM</text>
+<text x="65" y="65" fill="rgba(123,111,240,.4)" font-size="10" font-family="Syne,sans-serif" font-weight="700" letter-spacing="2">TOR 1 — PRD · ŻYWY DOKUMENT · WIELE ITERACJI</text>
+<text x="665" y="1145" fill="rgba(240,112,80,.4)" font-size="10" font-family="Syne,sans-serif" font-weight="700" letter-spacing="2">TOR 2 — BACKLOG / SPRINT · URUCHAMIANY PRZEZ PM</text>
 
 <!-- ══════════════════════════════════════════ -->
 <!--  TOR 1 — PRD                              -->
@@ -479,157 +453,151 @@ svg line:not(.flow-line), svg path:not(.flow-line) {
 
 <!-- INPUTS -->
 <g class="node" data-id="notatki">
-  <rect x="48" y="78" width="194" height="44" rx="8"
+  <rect x="70" y="110" width="220" height="48" rx="10"
     fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.11)" stroke-width=".7"/>
-  <text fill="#aaa" x="145" y="97" text-anchor="middle" dominant-baseline="central"
+  <text fill="#aaa" x="180" y="130" text-anchor="middle" dominant-baseline="central"
     font-size="13" font-family="DM Sans,sans-serif" font-weight="500">Notatki ze spotkań</text>
-  <text fill="#555" x="145" y="113" text-anchor="middle" dominant-baseline="central"
+  <text fill="#555" x="180" y="146" text-anchor="middle" dominant-baseline="central"
     font-size="10.5" font-family="DM Sans,sans-serif">tekst / audio</text>
 </g>
 <g class="node" data-id="dokumenty">
-  <rect x="258" y="78" width="214" height="44" rx="8"
+  <rect x="310" y="110" width="220" height="48" rx="10"
     fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.11)" stroke-width=".7"/>
-  <text fill="#aaa" x="365" y="97" text-anchor="middle" dominant-baseline="central"
+  <text fill="#aaa" x="420" y="130" text-anchor="middle" dominant-baseline="central"
     font-size="13" font-family="DM Sans,sans-serif" font-weight="500">Dokumenty PDF / Word</text>
-  <text fill="#555" x="365" y="113" text-anchor="middle" dominant-baseline="central"
-    font-size="10.5" font-family="DM Sans,sans-serif">briefy · raporty UX · stare PRD</text>
+  <text fill="#555" x="420" y="146" text-anchor="middle" dominant-baseline="central"
+    font-size="10.5" font-family="DM Sans,sans-serif">briefy · raporty UX</text>
 </g>
 <!-- merge inputs → Agent 1 -->
-<path d="M 145 122 L 145 152 L 265 152" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
-<path d="M 365 122 L 365 152 L 265 152" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
-<line x1="265" y1="152" x2="265" y2="162" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" marker-end="url(#a0)"/>
+<path d="M 180 158 L 180 200 L 300 200" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+<path d="M 420 158 L 420 200 L 300 200" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+<line x1="300" y1="200" x2="300" y2="250" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" marker-end="url(#a0)"/>
 
 <!-- AGENT 1 -->
 <g class="node" data-id="agent1">
-  <rect x="80" y="162" width="370" height="56" rx="9"
+  <rect x="100" y="250" width="400" height="60" rx="12"
     fill="rgba(123,111,240,.13)" stroke="rgba(123,111,240,.38)" stroke-width=".8"/>
-  <text fill="rgba(123,111,240,.95)" x="265" y="184" text-anchor="middle" dominant-baseline="central"
-    font-size="13.5" font-family="DM Sans,sans-serif" font-weight="600">Agent 1: Ekstrakcja i transkrypcja</text>
-  <text fill="rgba(123,111,240,.5)" x="265" y="203" text-anchor="middle" dominant-baseline="central"
+  <text fill="rgba(123,111,240,.95)" x="300" y="272" text-anchor="middle" dominant-baseline="central"
+    font-size="14" font-family="DM Sans,sans-serif" font-weight="600">Agent 1: Ekstrakcja i transkrypcja</text>
+  <text fill="rgba(123,111,240,.5)" x="300" y="293" text-anchor="middle" dominant-baseline="central"
     font-size="11.5" font-family="DM Sans,sans-serif">strukturyzuje surowe wejścia → JSON</text>
 </g>
-<line x1="265" y1="218" x2="265" y2="233" stroke="rgba(139, 128, 249, 0.6)" stroke-width="1.5" marker-end="url(#ap)" class="flow-line"/>
+<line x1="300" y1="310" x2="300" y2="400" stroke="rgba(139, 128, 249, 0.6)" stroke-width="1.5" marker-end="url(#ap)" class="flow-line"/>
 
 <!-- GATE 1 -->
 <g class="node" data-id="gate1">
-  <polygon points="265,233 345,265 265,297 185,265"
+  <polygon points="300,400 390,440 300,480 210,440"
     fill="rgba(245,185,66,.13)" stroke="rgba(245,185,66,.4)" stroke-width=".8"/>
-  <text fill="rgba(245,185,66,.95)" x="265" y="259" text-anchor="middle" dominant-baseline="central"
+  <text fill="rgba(245,185,66,.95)" x="300" y="432" text-anchor="middle" dominant-baseline="central"
     font-size="12" font-family="Syne,sans-serif" font-weight="700">Przegląd PM #1</text>
-  <text fill="rgba(245,185,66,.5)" x="265" y="275" text-anchor="middle" dominant-baseline="central"
-    font-size="10.5" font-family="DM Sans,sans-serif">ekstrakcja poprawna?</text>
+  <text fill="rgba(245,185,66,.5)" x="300" y="450" text-anchor="middle" dominant-baseline="central"
+    font-size="10.5" font-family="DM Sans,sans-serif">ekstrakcja OK?</text>
 </g>
 <!-- G1 ok ↓ -->
-<line x1="265" y1="297" x2="265" y2="312" stroke="rgba(66, 226, 184, 0.6)" stroke-width="1.5" marker-end="url(#at)" class="flow-line"/>
-<text fill="rgba(66, 226, 184, 0.9)" x="272" y="308" font-size="10" font-family="DM Sans,sans-serif">✓ tak</text>
+<line x1="300" y1="480" x2="300" y2="550" stroke="rgba(66, 226, 184, 0.6)" stroke-width="1.5" marker-end="url(#at)" class="flow-line"/>
+<text fill="rgba(66, 226, 184, 0.9)" x="310" y="510" font-size="10" font-family="DM Sans,sans-serif">✓ tak</text>
 <!-- G1 reject ← loop left -->
-<path d="M 185 265 L 18 265 L 18 190 L 80 190"
+<path d="M 210 440 L 20 440 L 20 280 L 100 280"
   fill="none" stroke="rgba(255, 94, 94, 0.5)" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#ar)"/>
-<text fill="rgba(255, 94, 94, 0.7)" x="22" y="230" font-size="9.5" font-family="DM Sans,sans-serif" transform="rotate(-90,22,230)">✗ popraw wejście</text>
+<text fill="rgba(255, 94, 94, 0.7)" x="25" y="360" font-size="10" font-family="DM Sans,sans-serif" transform="rotate(-90,25,360)">✗ popraw wejście</text>
 
 <!-- AGENT 2 -->
 <g class="node" data-id="agent2">
-  <rect x="80" y="312" width="370" height="56" rx="9"
+  <rect x="100" y="550" width="400" height="60" rx="12"
     fill="rgba(123,111,240,.13)" stroke="rgba(123,111,240,.38)" stroke-width=".8"/>
-  <text fill="rgba(123,111,240,.95)" x="265" y="334" text-anchor="middle" dominant-baseline="central"
-    font-size="13.5" font-family="DM Sans,sans-serif" font-weight="600">Agent 2: Analiza wymagań</text>
-  <text fill="rgba(123,111,240,.5)" x="265" y="353" text-anchor="middle" dominant-baseline="central"
-    font-size="11.5" font-family="DM Sans,sans-serif">MoSCoW · diff z aktualnym PRD · epiki</text>
+  <text fill="rgba(123,111,240,.95)" x="300" y="572" text-anchor="middle" dominant-baseline="central"
+    font-size="14" font-family="DM Sans,sans-serif" font-weight="600">Agent 2: Analiza wymagań</text>
+  <text fill="rgba(123,111,240,.5)" x="300" y="593" text-anchor="middle" dominant-baseline="central"
+    font-size="11.5" font-family="DM Sans,sans-serif">MoSCoW · diff z aktualnym PRD</text>
 </g>
-<line x1="265" y1="368" x2="265" y2="383" stroke="rgba(139, 128, 249, 0.6)" stroke-width="1.5" marker-end="url(#ap)" class="flow-line"/>
+<line x1="300" y1="610" x2="300" y2="700" stroke="rgba(139, 128, 249, 0.6)" stroke-width="1.5" marker-end="url(#ap)" class="flow-line"/>
 
 <!-- AGENT 3 -->
 <g class="node" data-id="agent3">
-  <rect x="80" y="383" width="370" height="56" rx="9"
+  <rect x="100" y="700" width="400" height="60" rx="12"
     fill="rgba(123,111,240,.13)" stroke="rgba(123,111,240,.38)" stroke-width=".8"/>
-  <text fill="rgba(123,111,240,.95)" x="265" y="405" text-anchor="middle" dominant-baseline="central"
-    font-size="13.5" font-family="DM Sans,sans-serif" font-weight="600">Agent 3: Aktualizacja PRD</text>
-  <text fill="rgba(123,111,240,.5)" x="265" y="424" text-anchor="middle" dominant-baseline="central"
-    font-size="11.5" font-family="DM Sans,sans-serif">zapisuje v+1 w Confluence · tylko zmienione sekcje</text>
+  <text fill="rgba(123,111,240,.95)" x="300" y="722" text-anchor="middle" dominant-baseline="central"
+    font-size="14" font-family="DM Sans,sans-serif" font-weight="600">Agent 3: Aktualizacja PRD</text>
+  <text fill="rgba(123,111,240,.5)" x="300" y="743" text-anchor="middle" dominant-baseline="central"
+    font-size="11.5" font-family="DM Sans,sans-serif">zapisuje v+1 w Confluence</text>
 </g>
-<line x1="265" y1="439" x2="265" y2="454" stroke="rgba(139, 128, 249, 0.6)" stroke-width="1.5" marker-end="url(#ap)" class="flow-line"/>
+<line x1="300" y1="760" x2="300" y2="850" stroke="rgba(139, 128, 249, 0.6)" stroke-width="1.5" marker-end="url(#ap)" class="flow-line"/>
 
 <!-- GATE PRD -->
 <g class="node" data-id="gate_prd">
-  <polygon points="265,454 345,486 265,518 185,486"
+  <polygon points="300,850 390,890 300,930 210,890"
     fill="rgba(245,185,66,.13)" stroke="rgba(245,185,66,.4)" stroke-width=".8"/>
-  <text fill="rgba(245,185,66,.95)" x="265" y="480" text-anchor="middle" dominant-baseline="central"
+  <text fill="rgba(245,185,66,.95)" x="300" y="882" text-anchor="middle" dominant-baseline="central"
     font-size="12" font-family="Syne,sans-serif" font-weight="700">Akceptacja PRD #2</text>
-  <text fill="rgba(245,185,66,.5)" x="265" y="496" text-anchor="middle" dominant-baseline="central"
-    font-size="10.5" font-family="DM Sans,sans-serif">zmiany wystarczające?</text>
+  <text fill="rgba(245,185,66,.5)" x="300" y="900" text-anchor="middle" dominant-baseline="central"
+    font-size="10.5" font-family="DM Sans,sans-serif">zmiany OK?</text>
 </g>
 <!-- G_PRD ok ↓ -->
-<line x1="265" y1="518" x2="265" y2="533" stroke="rgba(66, 226, 184, 0.6)" stroke-width="1.5" marker-end="url(#at)" class="flow-line"/>
-<text fill="rgba(66, 226, 184, 0.9)" x="272" y="529" font-size="10" font-family="DM Sans,sans-serif">✓ tak</text>
+<line x1="300" y1="930" x2="300" y2="1000" stroke="rgba(66, 226, 184, 0.6)" stroke-width="1.5" marker-end="url(#at)" class="flow-line"/>
+<text fill="rgba(66, 226, 184, 0.9)" x="310" y="960" font-size="10" font-family="DM Sans,sans-serif">✓ tak</text>
 <!-- G_PRD reject ← loop left -->
-<path d="M 185 486 L 18 486 L 18 411 L 80 411"
+<path d="M 210 890 L 20 890 L 20 730 L 100 730"
   fill="none" stroke="rgba(255, 94, 94, 0.5)" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#ar)"/>
-<text fill="rgba(255, 94, 94, 0.7)" x="22" y="452" font-size="9.5" font-family="DM Sans,sans-serif" transform="rotate(-90,22,452)">✗ regeneruj PRD</text>
+<text fill="rgba(255, 94, 94, 0.7)" x="25" y="810" font-size="10" font-family="DM Sans,sans-serif" transform="rotate(-90,25,810)">✗ regeneruj PRD</text>
 
 <!-- PRD CONFLUENCE — living doc -->
 <g class="node" data-id="prd_confluence">
-  <rect x="80" y="533" width="370" height="112" rx="10"
+  <rect x="100" y="1000" width="400" height="112" rx="12"
     fill="rgba(52,200,150,.09)" stroke="rgba(52,200,150,.45)" stroke-width="1"/>
-  <!-- title -->
-  <text fill="rgba(52,200,150,.95)" x="265" y="560" text-anchor="middle" dominant-baseline="central"
+  <text fill="rgba(52,200,150,.95)" x="300" y="1027" text-anchor="middle" dominant-baseline="central"
     font-size="14" font-family="DM Sans,sans-serif" font-weight="700">PRD w Confluence</text>
-  <!-- versions row -->
-  <text fill="rgba(52,200,150,.45)" x="265" y="580" text-anchor="middle" dominant-baseline="central"
-    font-size="10.5" font-family="DM Sans,sans-serif">żywy dokument · status: Approved</text>
-  <!-- version pills -->
-  <rect x="98"  y="594" width="28" height="18" rx="5" fill="rgba(52,200,150,.12)" stroke="rgba(52,200,150,.25)" stroke-width=".6"/>
-  <text fill="rgba(52,200,150,.6)" x="112" y="603" text-anchor="middle" dominant-baseline="central" font-size="9.5" font-family="DM Sans,sans-serif">v1</text>
-  <rect x="133" y="594" width="28" height="18" rx="5" fill="rgba(52,200,150,.12)" stroke="rgba(52,200,150,.25)" stroke-width=".6"/>
-  <text fill="rgba(52,200,150,.6)" x="147" y="603" text-anchor="middle" dominant-baseline="central" font-size="9.5" font-family="DM Sans,sans-serif">v2</text>
-  <rect x="168" y="594" width="28" height="18" rx="5" fill="rgba(52,200,150,.12)" stroke="rgba(52,200,150,.25)" stroke-width=".6"/>
-  <text fill="rgba(52,200,150,.6)" x="182" y="603" text-anchor="middle" dominant-baseline="central" font-size="9.5" font-family="DM Sans,sans-serif">v3</text>
-  <rect x="203" y="594" width="28" height="18" rx="5" fill="rgba(52,200,150,.12)" stroke="rgba(52,200,150,.25)" stroke-width=".6"/>
-  <text fill="rgba(52,200,150,.6)" x="217" y="603" text-anchor="middle" dominant-baseline="central" font-size="9.5" font-family="DM Sans,sans-serif">v4</text>
-  <text fill="rgba(52,200,150,.3)" x="245" y="603" dominant-baseline="central" font-size="10" font-family="DM Sans,sans-serif">···</text>
-  <rect x="260" y="594" width="48" height="18" rx="5" fill="rgba(52,200,150,.2)" stroke="rgba(52,200,150,.4)" stroke-width=".8"/>
-  <text fill="rgba(52,200,150,.85)" x="284" y="603" text-anchor="middle" dominant-baseline="central" font-size="9.5" font-family="DM Sans,sans-serif" font-weight="600">v14 NOW</text>
-  <!-- subtext -->
-  <text fill="rgba(52,200,150,.35)" x="265" y="629" text-anchor="middle" dominant-baseline="central"
-    font-size="10.5" font-family="DM Sans,sans-serif">historia wersji w Confluence · stały URL</text>
+  <text fill="rgba(52,200,150,.45)" x="300" y="1047" text-anchor="middle" dominant-baseline="central"
+    font-size="11" font-family="DM Sans,sans-serif">żywy dokument · status: Approved</text>
+  <rect x="133" y="1061" width="28" height="18" rx="5" fill="rgba(52,200,150,.12)" stroke="rgba(52,200,150,.25)" stroke-width=".6"/>
+  <text fill="rgba(52,200,150,.6)" x="147" y="1070" text-anchor="middle" dominant-baseline="central" font-size="9.5" font-family="DM Sans,sans-serif">v1</text>
+  <rect x="168" y="1061" width="28" height="18" rx="5" fill="rgba(52,200,150,.12)" stroke="rgba(52,200,150,.25)" stroke-width=".6"/>
+  <text fill="rgba(52,200,150,.6)" x="182" y="1070" text-anchor="middle" dominant-baseline="central" font-size="9.5" font-family="DM Sans,sans-serif">v2</text>
+  <rect x="203" y="1061" width="28" height="18" rx="5" fill="rgba(52,200,150,.12)" stroke="rgba(52,200,150,.25)" stroke-width=".6"/>
+  <text fill="rgba(52,200,150,.6)" x="217" y="1070" text-anchor="middle" dominant-baseline="central" font-size="9.5" font-family="DM Sans,sans-serif">v3</text>
+  <text fill="rgba(52,200,150,.3)" x="255" y="1070" dominant-baseline="central" font-size="10" font-family="DM Sans,sans-serif">···</text>
+  <rect x="275" y="1061" width="54" height="18" rx="5" fill="rgba(52,200,150,.2)" stroke="rgba(52,200,150,.4)" stroke-width=".8"/>
+  <text fill="rgba(52,200,150,.85)" x="302" y="1070" text-anchor="middle" dominant-baseline="central" font-size="9.5" font-family="DM Sans,sans-serif" font-weight="600">v14 NOW</text>
+  <text fill="rgba(52,200,150,.35)" x="300" y="1096" text-anchor="middle" dominant-baseline="central"
+    font-size="11" font-family="DM Sans,sans-serif">historia wersji · stały URL</text>
 </g>
 
-<!-- ITERATION LOOP — z boku, czytelna pętla -->
-<path d="M 80 590 L 18 590 L 18 122 L 48 122"
+<!-- ITERATION LOOP -->
+<path d="M 100 1056 L 20 1056 L 20 154 L 70 154"
   fill="none" stroke="rgba(139, 128, 249, 0.4)" stroke-width="1.5" stroke-dasharray="6 4" marker-end="url(#ap)"/>
 <!-- loop label badge -->
-<rect x="26" y="330" width="16" height="110" rx="4" fill="rgba(123,111,240,.08)" stroke="rgba(123,111,240,.15)" stroke-width=".6"/>
-<text fill="rgba(123,111,240,.4)" x="34" y="385" text-anchor="middle" dominant-baseline="central"
-  font-size="8.5" font-family="Syne,sans-serif" font-weight="700" transform="rotate(-90,34,385)" letter-spacing="1.2">NOWE SPOTKANIE → KOLEJNA ITERACJA</text>
+<rect x="26" y="550" width="16" height="150" rx="4" fill="rgba(123,111,240,.08)" stroke="rgba(123,111,240,.15)" stroke-width=".6"/>
+<text fill="rgba(123,111,240,.4)" x="34" y="625" text-anchor="middle" dominant-baseline="central"
+  font-size="9" font-family="Syne,sans-serif" font-weight="700" transform="rotate(-90,34,625)" letter-spacing="1.5">NOWE SPOTKANIE → KOLEJNA ITERACJA</text>
 
 <!-- ══════════════════════════════════════════ -->
 <!--  CZAS SEPARATOR                           -->
 <!-- ══════════════════════════════════════════ -->
 
-<line x1="30" y1="680" x2="1030" y2="680"
+<line x1="40" y1="1180" x2="1160" y2="1180"
   stroke="rgba(255,255,255,.05)" stroke-width="1" stroke-dasharray="4 8"/>
-<rect x="380" y="668" width="300" height="24" rx="6" fill="#12141a" stroke="rgba(255,255,255,.06)" stroke-width=".8"/>
-<text fill="#555" x="530" y="680" text-anchor="middle" dominant-baseline="central"
+<rect x="450" y="1168" width="300" height="24" rx="6" fill="#12141a" stroke="rgba(255,255,255,.06)" stroke-width=".8"/>
+<text fill="#555" x="600" y="1180" text-anchor="middle" dominant-baseline="central"
   font-size="11" font-family="DM Sans,sans-serif" letter-spacing=".3">⏳  dni, tygodnie, miesiące później…</text>
 
 <!-- ══════════════════════════════════════════ -->
-<!--  PM TRIGGER (centered bridge)             -->
+<!--  PM TRIGGER                               -->
 <!-- ══════════════════════════════════════════ -->
 
 <!-- arrow from PRD box to trigger -->
-<path d="M 265 645 L 265 695 L 530 695 L 530 713"
+<path d="M 300 1112 L 300 1200 L 600 1200 L 600 1250"
   fill="none" stroke="rgba(255, 210, 63, 0.5)" stroke-width="1.5" marker-end="url(#aa)"/>
 
 <g class="node" data-id="pm_trigger">
-  <rect x="350" y="713" width="360" height="52" rx="9"
+  <rect x="400" y="1250" width="400" height="52" rx="10"
     fill="rgba(245,185,66,.12)" stroke="rgba(245,185,66,.48)" stroke-width="1.1"/>
-  <text fill="rgba(245,185,66,.97)" x="530" y="733" text-anchor="middle" dominant-baseline="central"
+  <text fill="rgba(245,185,66,.97)" x="600" y="1270" text-anchor="middle" dominant-baseline="central"
     font-size="14" font-family="Syne,sans-serif" font-weight="700">⚡  PM uruchamia Tor 2</text>
-  <text fill="rgba(245,185,66,.55)" x="530" y="752" text-anchor="middle" dominant-baseline="central"
-    font-size="11" font-family="DM Sans,sans-serif">PRD wystarczająco dojrzałe → startuje backlog</text>
+  <text fill="rgba(245,185,66,.55)" x="600" y="1289" text-anchor="middle" dominant-baseline="central"
+    font-size="11" font-family="DM Sans,sans-serif">PRD dojrzałe → start backlog</text>
 </g>
 
 <!-- arrow from trigger to Agent 4 -->
-<line x1="710" y1="739" x2="790" y2="739" fill="none" stroke="rgba(255, 210, 63, 0.5)" stroke-width="1.5" marker-end="url(#aa)" class="flow-line"/>
+<path d="M 600 1302 L 600 1380 L 900 1380 L 900 1480" fill="none" stroke="rgba(255, 210, 63, 0.5)" stroke-width="1.5" marker-end="url(#aa)" class="flow-line"/>
 
 <!-- ══════════════════════════════════════════ -->
 <!--  TOR 2 — BACKLOG / SPRINT                 -->
@@ -638,140 +606,150 @@ svg line:not(.flow-line), svg path:not(.flow-line) {
 
 <!-- AGENT 4 -->
 <g class="node" data-id="agent4">
-  <rect x="575" y="760" width="434" height="56" rx="9"
+  <rect x="700" y="1480" width="400" height="60" rx="12"
     fill="rgba(240,112,80,.12)" stroke="rgba(240,112,80,.35)" stroke-width=".8"/>
-  <!-- "reads PRD" badge -->
-  <rect x="575" y="757" width="112" height="16" rx="4"
+  <rect x="700" y="1477" width="112" height="16" rx="4"
     fill="rgba(52,200,150,.1)" stroke="rgba(52,200,150,.25)" stroke-width=".6"/>
-  <text fill="rgba(52,200,150,.65)" x="631" y="765" text-anchor="middle" dominant-baseline="central"
-    font-size="9" font-family="DM Sans,sans-serif">📖 czyta PRD z Confluence</text>
-  <text fill="rgba(240,112,80,.95)" x="792" y="782" text-anchor="middle" dominant-baseline="central"
-    font-size="13.5" font-family="DM Sans,sans-serif" font-weight="600">Agent 4: Jira + planowanie sprintów</text>
-  <text fill="rgba(240,112,80,.5)" x="792" y="801" text-anchor="middle" dominant-baseline="central"
-    font-size="11.5" font-family="DM Sans,sans-serif">Epiki · User Stories · Sprint proposal (DRAFT)</text>
+  <text fill="rgba(52,200,150,.65)" x="756" y="1485" text-anchor="middle" dominant-baseline="central"
+    font-size="9" font-family="DM Sans,sans-serif">📖 czyta PRD</text>
+  <text fill="rgba(240,112,80,.95)" x="900" y="1502" text-anchor="middle" dominant-baseline="central"
+    font-size="14" font-family="DM Sans,sans-serif" font-weight="600">Agent 4: Jira + Backlog</text>
+  <text fill="rgba(240,112,80,.5)" x="900" y="1523" text-anchor="middle" dominant-baseline="central"
+    font-size="11.5" font-family="DM Sans,sans-serif">Epiki · Stories · Sprint proposal</text>
 </g>
-<line x1="792" y1="816" x2="792" y2="831" stroke="rgba(255, 126, 95, 0.6)" stroke-width="1.5" marker-end="url(#ac)" class="flow-line"/>
+<line x1="900" y1="1540" x2="900" y2="1630" stroke="rgba(255, 126, 95, 0.6)" stroke-width="1.5" marker-end="url(#ac)" class="flow-line"/>
 
 <!-- GATE BACKLOG -->
 <g class="node" data-id="gate_backlog">
-  <polygon points="792,831 882,863 792,895 702,863"
+  <polygon points="900,1630 990,1670 900,1710 810,1670"
     fill="rgba(245,185,66,.13)" stroke="rgba(245,185,66,.4)" stroke-width=".8"/>
-  <text fill="rgba(245,185,66,.95)" x="792" y="857" text-anchor="middle" dominant-baseline="central"
+  <text fill="rgba(245,185,66,.95)" x="900" y="1662" text-anchor="middle" dominant-baseline="central"
     font-size="12" font-family="Syne,sans-serif" font-weight="700">Akceptacja PM #3</text>
-  <text fill="rgba(245,185,66,.5)" x="792" y="873" text-anchor="middle" dominant-baseline="central"
-    font-size="10.5" font-family="DM Sans,sans-serif">backlog i sprint OK?</text>
+  <text fill="rgba(245,185,66,.5)" x="900" y="1680" text-anchor="middle" dominant-baseline="central"
+    font-size="10.5" font-family="DM Sans,sans-serif">backlog OK?</text>
 </g>
 <!-- G_backlog ok ↓ -->
-<line x1="792" y1="895" x2="792" y2="910" stroke="rgba(66, 226, 184, 0.6)" stroke-width="1.5" marker-end="url(#at)" class="flow-line"/>
-<text fill="rgba(66, 226, 184, 0.9)" x="799" y="906" font-size="10" font-family="DM Sans,sans-serif">✓ tak</text>
+<line x1="900" y1="1710" x2="900" y2="1780" stroke="rgba(66, 226, 184, 0.6)" stroke-width="1.5" marker-end="url(#at)" class="flow-line"/>
+<text fill="rgba(66, 226, 184, 0.9)" x="910" y="1740" font-size="10" font-family="DM Sans,sans-serif">✓ tak</text>
 <!-- G_backlog reject → right loop -->
-<path d="M 882 863 L 1042 863 L 1042 788 L 1009 788"
+<path d="M 990 1670 L 1180 1670 L 1180 1510 L 1100 1510"
   fill="none" stroke="rgba(255, 94, 94, 0.5)" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#ar)"/>
-<text fill="rgba(255, 94, 94, 0.7)" x="1038" y="828" text-anchor="middle" font-size="9.5" font-family="DM Sans,sans-serif" transform="rotate(90,1038,828)">✗ regeneruj backlog</text>
+<text fill="rgba(255, 94, 94, 0.7)" x="1175" y="1590" text-anchor="middle" font-size="10" font-family="DM Sans,sans-serif" transform="rotate(90,1175,1590)">✗ regeneruj backlog</text>
 
 <!-- JIRA OUTPUT -->
 <g class="node" data-id="out_jira">
-  <rect x="575" y="910" width="434" height="52" rx="9"
+  <rect x="700" y="1780" width="400" height="52" rx="10"
     fill="rgba(240,112,80,.10)" stroke="rgba(240,112,80,.32)" stroke-width=".8"/>
-  <text fill="rgba(240,112,80,.95)" x="792" y="930" text-anchor="middle" dominant-baseline="central"
-    font-size="13.5" font-family="DM Sans,sans-serif" font-weight="600">Backlog + Sprint Plan w Jira</text>
-  <text fill="rgba(240,112,80,.5)" x="792" y="949" text-anchor="middle" dominant-baseline="central"
-    font-size="11.5" font-family="DM Sans,sans-serif">Epiki · Stories z AC · Sprint proposal (DRAFT)</text>
+  <text fill="rgba(240,112,80,.95)" x="900" y="1800" text-anchor="middle" dominant-baseline="central"
+    font-size="14" font-family="DM Sans,sans-serif" font-weight="600">Backlog w Jira (DRAFT)</text>
+  <text fill="rgba(240,112,80,.5)" x="900" y="1821" text-anchor="middle" dominant-baseline="central"
+    font-size="11.5" font-family="DM Sans,sans-serif">Epiki · Stories z AC · Estymaty</text>
 </g>
-<line x1="792" y1="962" x2="792" y2="977" stroke="rgba(255, 126, 95, 0.6)" stroke-width="1.5" marker-end="url(#ac)" class="flow-line"/>
+<line x1="900" y1="1832" x2="900" y2="1930" stroke="rgba(255, 126, 95, 0.6)" stroke-width="1.5" marker-end="url(#ac)" class="flow-line"/>
 
 <!-- GATE SPRINT -->
 <g class="node" data-id="gate_sprint">
-  <polygon points="792,977 882,1009 792,1041 702,1009"
+  <polygon points="900,1930 990,1970 900,2010 810,1970"
     fill="rgba(245,185,66,.13)" stroke="rgba(245,185,66,.4)" stroke-width=".8"/>
-  <text fill="rgba(245,185,66,.95)" x="792" y="1003" text-anchor="middle" dominant-baseline="central"
+  <text fill="rgba(245,185,66,.95)" x="900" y="1962" text-anchor="middle" dominant-baseline="central"
     font-size="12" font-family="Syne,sans-serif" font-weight="700">Finalne uruchomienie #4</text>
-  <text fill="rgba(245,185,66,.5)" x="792" y="1019" text-anchor="middle" dominant-baseline="central"
-    font-size="10.5" font-family="DM Sans,sans-serif">sprint idzie na produkcję?</text>
+  <text fill="rgba(245,185,66,.5)" x="900" y="1980" text-anchor="middle" dominant-baseline="central"
+    font-size="10.5" font-family="DM Sans,sans-serif">sprint aktywny?</text>
 </g>
 <!-- G_sprint ok ↓ -->
-<line x1="792" y1="1041" x2="792" y2="1060" stroke="rgba(66, 226, 184, 0.6)" stroke-width="1.5" marker-end="url(#at)" class="flow-line"/>
-<text fill="rgba(66, 226, 184, 0.9)" x="799" y="1056" font-size="10" font-family="DM Sans,sans-serif">✓ aktywuj sprint</text>
+<line x1="900" y1="2010" x2="900" y2="2110" stroke="rgba(66, 226, 184, 0.6)" stroke-width="1.5" marker-end="url(#at)" class="flow-line"/>
+<text fill="rgba(66, 226, 184, 0.9)" x="910" y="2060" font-size="10" font-family="DM Sans,sans-serif">✓ aktywuj</text>
 <!-- G_sprint reject → right loop -->
-<path d="M 882 1009 L 1042 1009 L 1042 938 L 1009 938"
+<path d="M 990 1970 L 1180 1970 L 1180 1810 L 1100 1810"
   fill="none" stroke="rgba(255, 94, 94, 0.5)" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#ar)"/>
-<text fill="rgba(255, 94, 94, 0.7)" x="1038" y="974" text-anchor="middle" font-size="9.5" font-family="DM Sans,sans-serif" transform="rotate(90,1038,974)">✗ wróć do backlogu</text>
+<text fill="rgba(255, 94, 94, 0.7)" x="1175" y="1890" text-anchor="middle" font-size="10" font-family="DM Sans,sans-serif" transform="rotate(90,1175,1890)">✗ wróć do backlogu</text>
 
-<!-- ══════════════════════════════════════════ -->
-<!--  BOTTOM — AGENT 5 + SSOT                  -->
-<!--  Obie ścieżki zbiegają się tutaj          -->
-<!-- ══════════════════════════════════════════ -->
-
-<!-- merge connectors from Tor 1 (PRD) and Tor 2 (Sprint) -->
-<path d="M 265 645 L 265 1105 L 410 1105"
+<!-- BOTTOM -->
+<!-- merge connectors -->
+<path d="M 300 1112 L 300 2110 L 600 2110"
   fill="none" stroke="rgba(66, 226, 184, 0.5)" stroke-width="1.2" stroke-dasharray="4 5"/>
-<path d="M 792 1060 L 792 1105 L 650 1105"
+<path d="M 900 2110 L 600 2110"
   fill="none" stroke="rgba(66, 226, 184, 0.5)" stroke-width="1.2" stroke-dasharray="4 5"/>
-<!-- small labels on merge lines -->
-<text fill="rgba(52,200,150,.25)" x="269" y="890" font-size="9.5" font-family="DM Sans,sans-serif">PRD zawsze aktywny</text>
-<line x1="530" y1="1105" x2="530" y2="1118" stroke="rgba(66, 226, 184, 0.5)" stroke-width="1.5" marker-end="url(#at)" class="flow-line"/>
+<line x1="600" y1="2110" x2="600" y2="2130" stroke="rgba(66, 226, 184, 0.5)" stroke-width="1.5" marker-end="url(#at)" class="flow-line"/>
 
 <!-- AGENT 5 -->
 <g class="node" data-id="agent5">
-  <rect x="180" y="1118" width="700" height="56" rx="9"
+  <rect x="200" y="2130" width="800" height="60" rx="12"
     fill="rgba(123,111,240,.13)" stroke="rgba(123,111,240,.38)" stroke-width=".8"/>
-  <!-- cron badge -->
-  <rect x="180" y="1115" width="90" height="16" rx="4"
+  <rect x="200" y="2127" width="90" height="16" rx="4"
     fill="rgba(245,185,66,.1)" stroke="rgba(245,185,66,.3)" stroke-width=".6"/>
-  <text fill="rgba(245,185,66,.65)" x="225" y="1123" text-anchor="middle" dominant-baseline="central"
-    font-size="9" font-family="DM Sans,sans-serif">⏰ co tydzień (cron)</text>
-  <text fill="rgba(123,111,240,.95)" x="530" y="1140" text-anchor="middle" dominant-baseline="central"
-    font-size="13.5" font-family="DM Sans,sans-serif" font-weight="600">Agent 5: Raportowanie statusu</text>
-  <text fill="rgba(123,111,240,.5)" x="530" y="1159" text-anchor="middle" dominant-baseline="central"
-    font-size="11.5" font-family="DM Sans,sans-serif">porównuje PRD + Jira · generuje raport tygodniowy → Confluence draft</text>
+  <text fill="rgba(245,185,66,.65)" x="245" y="2135" text-anchor="middle" dominant-baseline="central"
+    font-size="9" font-family="DM Sans,sans-serif">⏰ co tydzień</text>
+  <text fill="rgba(123,111,240,.95)" x="600" y="2152" text-anchor="middle" dominant-baseline="central"
+    font-size="14" font-family="DM Sans,sans-serif" font-weight="600">Agent 5: Raportowanie statusu</text>
+  <text fill="rgba(123,111,240,.5)" x="600" y="2173" text-anchor="middle" dominant-baseline="central"
+    font-size="11.5" font-family="DM Sans,sans-serif">porównuje PRD + Jira · raport tygodniowy</text>
 </g>
-<line x1="530" y1="1174" x2="530" y2="1189" stroke="rgba(139, 128, 249, 0.6)" stroke-width="1.5" marker-end="url(#ap)" class="flow-line"/>
+<line x1="600" y1="2190" x2="600" y2="2280" stroke="rgba(139, 128, 249, 0.6)" stroke-width="1.5" marker-end="url(#ap)" class="flow-line"/>
 
 <!-- GATE RAPORT -->
 <g class="node" data-id="gate_report">
-  <polygon points="530,1189 620,1221 530,1253 440,1221"
+  <polygon points="600,2280 690,2320 600,2360 510,2320"
     fill="rgba(245,185,66,.13)" stroke="rgba(245,185,66,.4)" stroke-width=".8"/>
-  <text fill="rgba(245,185,66,.95)" x="530" y="1215" text-anchor="middle" dominant-baseline="central"
+  <text fill="rgba(245,185,66,.95)" x="600" y="2312" text-anchor="middle" dominant-baseline="central"
     font-size="12" font-family="Syne,sans-serif" font-weight="700">Publikacja raportu #5</text>
-  <text fill="rgba(245,185,66,.5)" x="530" y="1231" text-anchor="middle" dominant-baseline="central"
-    font-size="10.5" font-family="DM Sans,sans-serif">PM zatwierdza przed wysyłką</text>
+  <text fill="rgba(245,185,66,.5)" x="600" y="2330" text-anchor="middle" dominant-baseline="central"
+    font-size="10.5" font-family="DM Sans,sans-serif">zatwierdź raport</text>
 </g>
-<line x1="530" y1="1253" x2="530" y2="1268" stroke="rgba(66, 226, 184, 0.6)" stroke-width="1.5" marker-end="url(#at)" class="flow-line"/>
-<text fill="rgba(66, 226, 184, 0.9)" x="537" y="1264" font-size="10" font-family="DM Sans,sans-serif">✓ publikuj</text>
+<line x1="600" y1="2360" x2="600" y2="2430" stroke="rgba(66, 226, 184, 0.6)" stroke-width="1.5" marker-end="url(#at)" class="flow-line"/>
+<text fill="rgba(66, 226, 184, 0.9)" x="610" y="2390" font-size="10" font-family="DM Sans,sans-serif">✓ publikuj</text>
 
 <!-- SSOT -->
 <g class="node" data-id="ssot">
-  <rect x="180" y="1268" width="700" height="60" rx="11"
+  <rect x="200" y="2430" width="800" height="60" rx="14"
     fill="rgba(52,200,150,.10)" stroke="rgba(52,200,150,.85)" stroke-width="1.3"/>
-  <text fill="rgba(52,200,150,.97)" x="530" y="1291" text-anchor="middle" dominant-baseline="central"
-    font-size="15" font-family="DM Sans,sans-serif" font-weight="700">Confluence — jeden punkt prawdy</text>
-  <text fill="rgba(52,200,150,.5)" x="530" y="1313" text-anchor="middle" dominant-baseline="central"
-    font-size="11.5" font-family="DM Sans,sans-serif">PRD (N wersji) · Sprint Reviews · Historia decyzji · Raporty tygodniowe</text>
+  <text fill="rgba(52,200,150,.97)" x="600" y="2453" text-anchor="middle" dominant-baseline="central"
+    font-size="16" font-family="DM Sans,sans-serif" font-weight="700">Confluence — jeden punkt prawdy (SSOT)</text>
+  <text fill="rgba(52,200,150,.5)" x="600" y="2475" text-anchor="middle" dominant-baseline="central"
+    font-size="12" font-family="DM Sans,sans-serif">PRD · Sprint Reviews · Historia decyzji · Raporty</text>
 </g>
 
-<!-- Slack output -->
-<path d="M 180 1298 L 90 1298 L 90 1385" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.2" marker-end="url(#a0)" class="flow-line"/>
+<!-- Slack output bottom -->
+<path d="M 200 2460 L 100 2460 L 100 2550" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.2" marker-end="url(#a0)" class="flow-line"/>
 <g class="node" data-id="slack">
-  <rect x="30" y="1385" width="180" height="46" rx="8"
+  <rect x="40" y="2550" width="200" height="46" rx="10"
     fill="rgba(52,200,150,.09)" stroke="rgba(52,200,150,.4)" stroke-width=".8"/>
-  <text fill="rgba(52,200,150,.85)" x="120" y="1404" text-anchor="middle" dominant-baseline="central"
+  <text fill="rgba(52,200,150,.85)" x="140" y="2573" text-anchor="middle" dominant-baseline="central"
     font-size="13" font-family="DM Sans,sans-serif" font-weight="600">Slack</text>
-  <text fill="rgba(52,200,150,.45)" x="120" y="1421" text-anchor="middle" dominant-baseline="central"
+</g>
+
+<!-- Jira sync output bottom -->
+<path d="M 1000 2460 L 1100 2460 L 1100 2550" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1.2" marker-end="url(#a0)" class="flow-line"/>
+<g class="node" data-id="jira_sync">
+  <rect x="960" y="2550" width="200" height="46" rx="10"
+    fill="rgba(240,112,80,.09)" stroke="rgba(240,112,80,.25)" stroke-width=".8"/>
+  <text fill="rgba(240,112,80,.85)" x="1060" y="2573" text-anchor="middle" dominant-baseline="central"
+    font-size="13" font-family="DM Sans,sans-serif" font-weight="600">Jira sync</text>
+</g>
+
+<!-- Slack output middle -->
+<path d="M 400 1276 L 150 1276 L 150 1350" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.2" marker-end="url(#a0)" class="flow-line"/>
+<g class="node" data-id="slack_mid">
+  <rect x="60" y="1350" width="180" height="46" rx="8"
+    fill="rgba(52,200,150,.09)" stroke="rgba(52,200,150,.4)" stroke-width=".8"/>
+  <text fill="rgba(52,200,150,.85)" x="150" y="1369" text-anchor="middle" dominant-baseline="central"
+    font-size="13" font-family="DM Sans,sans-serif" font-weight="600">Slack</text>
+  <text fill="rgba(52,200,150,.45)" x="150" y="1386" text-anchor="middle" dominant-baseline="central"
     font-size="10.5" font-family="DM Sans,sans-serif">notify po zatwierdzeniu</text>
 </g>
-<text fill="#333" x="90" y="1350" text-anchor="middle" font-size="9.5" font-family="DM Sans,sans-serif">auto-notify</text>
+<text fill="rgba(255,255,255,0.2)" x="150" y="1325" text-anchor="middle" font-size="9.5" font-family="DM Sans,sans-serif">auto-notify</text>
 
-<!-- Jira sync output -->
-<path d="M 880 1298 L 970 1298 L 970 1385" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1.2" marker-end="url(#a0)" class="flow-line"/>
-<g class="node" data-id="jira_sync">
-  <rect x="850" y="1385" width="180" height="46" rx="8"
+<!-- Jira sync output middle -->
+<path d="M 800 1276 L 1050 1276 L 1050 1350" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1.2" marker-end="url(#a0)" class="flow-line"/>
+<g class="node" data-id="jira_sync_mid">
+  <rect x="960" y="1350" width="180" height="46" rx="8"
     fill="rgba(240,112,80,.09)" stroke="rgba(240,112,80,.25)" stroke-width=".8"/>
-  <text fill="rgba(240,112,80,.85)" x="940" y="1404" text-anchor="middle" dominant-baseline="central"
+  <text fill="rgba(240,112,80,.85)" x="1050" y="1369" text-anchor="middle" dominant-baseline="central"
     font-size="13" font-family="DM Sans,sans-serif" font-weight="600">Jira sync</text>
-  <text fill="rgba(240,112,80,.45)" x="940" y="1421" text-anchor="middle" dominant-baseline="central"
+  <text fill="rgba(240,112,80,.45)" x="1050" y="1386" text-anchor="middle" dominant-baseline="central"
     font-size="10.5" font-family="DM Sans,sans-serif">linki PRD ↔ Epiki</text>
 </g>
-<text fill="#333" x="970" y="1350" text-anchor="middle" font-size="9.5" font-family="DM Sans,sans-serif">auto-sync</text>
+<text fill="rgba(255,255,255,0.2)" x="1050" y="1325" text-anchor="middle" font-size="9.5" font-family="DM Sans,sans-serif">auto-sync</text>
 
 </svg>
 </div>
@@ -1056,7 +1034,19 @@ description = f"Spec: {prd_url} (v{prd_version})"
 {jira:
   query=project=PROJ AND "Epic Link"=EP-12
   | columns=key,summary,status,sp
-}`}
+}`},
+
+  slack_mid:{b:'bt',l:'Notyfikacja',t:'Slack — start Toru 2',
+    d:'Automatyczne powiadomienie wysyłane do zespołu w momencie, gdy PM zdecyduje o uruchomieniu planowania backlogu. Zespół wie, że Agent 4 zaczął pracę.',
+    s:['Trigger PM → wyzwolenie notyfikacji','Link do PRD z którego generowany jest backlog','Informacja o statusie pracy Agenta 4'],
+    tools:['Slack API'],
+    code:null},
+
+  jira_sync_mid:{b:'bc',l:'Integracja',t:'Jira sync — powiązanie dokumentacji',
+    d:'Automatyczne tworzenie powiązań między PRD w Confluence a nadchodzącymi epikami w Jira. Zapewnia śledzenie zmian od samego początku.',
+    s:['Pobranie meta-danych z PRD','Inicjalizacja linków w Jira REST API','Przygotowanie struktury pod epiki Agenta 4'],
+    tools:['Jira REST API','Confluence API'],
+    code:null}
 };
 
 const panel = document.getElementById('panel');
@@ -1177,13 +1167,13 @@ startSim.addEventListener('click', startSimulation);
 let currentZoom = 1;
 const diagram = document.getElementById('diagram');
 const zoomVal = document.getElementById('zoomVal');
-const BASE_WIDTH = 1060;
+const BASE_WIDTH = 1200;
 
 function updateZoom() {
   const scale = currentZoom;
   const newWidth = BASE_WIDTH * scale;
   diagram.style.width = `${newWidth}px`;
-  diagram.style.maxWidth = 'none'; // Allow it to exceed parent
+  diagram.style.maxWidth = 'none'; 
   diagram.style.minWidth = 'none';
   zoomVal.innerText = Math.round(scale * 100) + '%';
 }
@@ -1205,7 +1195,7 @@ document.getElementById('zoomOut').addEventListener('click', () => {
 document.getElementById('zoomReset').addEventListener('click', () => {
   currentZoom = 1;
   diagram.style.width = '100%';
-  diagram.style.maxWidth = '1060px';
+  diagram.style.maxWidth = '1200px';
   diagram.style.minWidth = '720px';
   zoomVal.innerText = '100%';
 });
