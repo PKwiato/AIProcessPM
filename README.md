@@ -4,7 +4,7 @@
 
 AI Process PM to innowacyjne podejście do workflow Product Managera, które oddziela ciągłą pracę nad specyfikacją (PRD) od cyklu wytwórczego (Backlog/Sprint). System wykorzystuje 5 wyspecjalizowanych agentów AI oraz system bramek decyzyjnych "Human-in-the-Loop".
 
-![AI Process PM Dashboard](https://pkwiato.github.io/AIProcessPM/)
+https://pkwiato.github.io/AIProcessPM
 
 ## 🏗️ Architektura Systemu
 
